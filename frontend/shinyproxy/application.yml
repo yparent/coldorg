@@ -1,0 +1,35 @@
+server:
+  forward-headers-strategy: native
+  useForwardHeaders: true
+proxy:
+  title: cold org by thaink²
+#  logo-url: https://www.openanalytics.eu/shinyproxy/logo.png
+  port: 8080
+  landing-page: /app/coldorg
+  hide-navbar: true
+  authentication: none
+#  container-backend: kubernetes
+  docker:
+    port-range-start: 20000
+    internal-networking: true
+  specs:
+  - id: coldorg
+    display-name: cold org
+    container-cmd: ["R", "-e", ".libPaths('/home/packages/R');th2coldorg::coldorg_app_launcher()"]
+    container-image: th2coldorg/base_image
+    container-network: sp-net
+    minimum-seats-available: 1
+    seats-per-container: 2
+    allow-container-re-use: true
+    container-volumes:  ["/home/packages/R:/home/packages/R", "/home/chat:/home/chat"]
+    container-env:
+      CURRENT_DB: "postgresql"
+      TH_HOST: "51.159****"
+      TH_DATABASE: "rdb"
+      TH_DB_PASSWORD: "*****"
+      TH_DB_USERNAME: "th2dev"
+      TH_PORT: 1390
+      ENCRYPTION_PASS: ***
+logging:
+  file:
+    shinyproxy.log

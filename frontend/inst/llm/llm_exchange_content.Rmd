@@ -1,0 +1,8 @@
+---
+title:  Cold Org ChatBot
+author: "`r th2utils::get_username(Sys.getenv('CURRENT_USER'))`"
+date: "`r Sys.Date()`"
+output:
+  prettydoc::html_pretty:
+    theme: architect
+---

@@ -1,0 +1,15 @@
+
+# custom dashboard by thaink²
+
+## Logique de calcul des flags
+
+*  **Normal**: Adhesion expire dans plus de 90 jour
+
+*   **Reminder** : Adhesion expire dans moins de 90 jour:
+
+* **Warning** : Adhesion a expirée depuis moins de 6 semaine 
+
+* **Strong warning**: Adhesion a expirée depuis plus  de 6 semaines et moins de  12 semaines 
+
+* **Red** : Adhesion a expirée depuis plus  de 12 semaines
+

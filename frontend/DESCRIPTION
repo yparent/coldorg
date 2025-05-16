@@ -1,0 +1,25 @@
+Package: th2coldorg
+Type: Package
+Title: custom coldorg dashboards, reports, pipelines & transformations developped by thaink²
+Version: 0.1.1
+Author: thaink² team <contact@thaink2.com>
+Maintainer: thaink² team <contact@thaink2.com>
+Description: Specific and custom functions developped by thaink² team that in order deliver custom specific content including, dashboards, pipelines, reports and specific data tarnsformation
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    bs4Dash,
+    dplyr,
+    DT,
+    httr2,
+    magrittr,
+    purrr,
+    readr,
+    rmarkdown,
+    shiny,
+    shinymanager,
+    waiter
+RoxygenNote: 7.3.2
+Depends: 
+    R (>= 2.10)
